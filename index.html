@@ -26,15 +26,15 @@
     .feature-list li {
       margin-bottom: 10px;
     }
-    .form-section input,
-    .form-section textarea {
+    input,
+    textarea {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
       border-radius: 5px;
       border: none;
     }
-    .form-section button {
+    button {
       background-color: #FFD700;
       border: none;
       padding: 10px 20px;
@@ -71,11 +71,14 @@
   </ul>
 
   <h2>Join the Waitlist</h2>
-  <form class="form-section" name="waitlist" method="POST" data-netlify="true">
+  <form name="waitlist" method="POST" data-netlify="true">
+    <!-- This hidden input is CRITICAL for Netlify to identify the form -->
     <input type="hidden" name="form-name" value="waitlist" />
+    
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="expectation" rows="4" placeholder="What do you expect from HashSphere?" required></textarea>
+    
     <button type="submit">Join Now</button>
   </form>
 
@@ -88,3 +91,4 @@
   <p style="text-align: center; margin-top: 30px;">Only 1000 seats available. You'll be shown your number after signing up!</p>
 </body>
 </html>
+
